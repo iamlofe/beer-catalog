@@ -1,5 +1,15 @@
 .header__button {
+    margin-left: 1em;
+    z-index: 100;
     display: flex;
-    width: 100px;
-    height: 100px;
+    flex-direction: column;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    .header__button__icon {
+        margin: auto;
+        height: 4px;
+        width: 100%;
+        background: #fff;
+    }
 }

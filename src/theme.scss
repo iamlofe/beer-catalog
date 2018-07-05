@@ -1,5 +1,12 @@
 .App {
-    height: 1000px;
-    width: 1000px;
-    background: blue;
+    height: 100%;
+    width: 100%;
+    background: #106CC8;
+}
+
+.header {
+    height: 50px;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
 }
