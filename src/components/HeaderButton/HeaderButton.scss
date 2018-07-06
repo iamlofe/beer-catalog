@@ -1,0 +1,14 @@
+.header-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+}
+
+.header-button__icon {
+    margin: auto;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+}

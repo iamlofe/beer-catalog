@@ -1,0 +1,21 @@
+.content-box {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; // justify-content: center;
+}
+
+.content-box__header {
+    background: yellow;
+    height: 100px;
+}
+
+.content-box__content {
+    background: red;
+    height: 100px;
+}
+
+.content-box__element {
+    margin: 10px;
+    box-shadow: 2px 2px 10px 0px rgba(135, 124, 135, 1);
+    width: 20em; // margin: 10px auto;
+}

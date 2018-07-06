@@ -1,12 +1,29 @@
 .App {
     height: 100%;
     width: 100%;
+}
+
+header,
+footer {
+    width: 100%;
     background: #106CC8;
+}
+
+.main,
+.header {
+    // width: 80%;
+    margin: 0 auto;
 }
 
 .header {
     height: 50px;
     display: flex;
-    width: 80%;
     margin: 0 auto;
+    .header__block {
+        display: flex;
+        z-index: 1000;
+        background: #106CC8;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
 }
