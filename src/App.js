@@ -1,18 +1,18 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import HeaderButton from "./components/HeaderButton/HeaderButton";
-import HeaderLogo from "./components/HeaderLogo/HeaderLogo";
-import HeaderSlide from "./components/HeaderSlide/HeaderSlide";
-import ContentBox from "./components/ContentBox/ContentBox";
-import { Col, Row, Grid } from "react-bootstrap";
-import "./theme.scss";
+import React, {Component} from 'react';
+import logo from './logo.svg';
+import HeaderButton from './components/HeaderButton/HeaderButton';
+import HeaderLogo from './components/HeaderLogo/HeaderLogo';
+import HeaderSlide from './components/HeaderSlide/HeaderSlide';
+import ContentBox from './components/ContentBox/ContentBox';
+import {Col, Row, Grid} from 'react-bootstrap';
+import './theme.scss';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       stateOfButton: false,
-      massOfBeers: [1111111111, 1111, 1, 1, 1, 1, 1, 1]
+      massOfBeers: [1111111111, 1111, 1, 1, 1, 1, 1, 1, 1]
     };
   }
   changeStateOfButton() {
