@@ -1,6 +1,6 @@
-import React from "react";
-import "./ContentBox.scss";
-import { Col, Row, Grid, Button } from "react-bootstrap";
+import React from 'react';
+import './ContentBox.scss';
+import {Col, Row, Grid, Button} from 'react-bootstrap';
 
 class ContentBox extends React.Component {
   constructor(props) {
@@ -11,10 +11,11 @@ class ContentBox extends React.Component {
   }
 
   updateDimensions() {
-    this.setState({ width: window.innerWidth });
+    this.setState({width: window.innerWidth});
+    //////////////////
   }
   componentDidMount() {
-    window.addEventListener("resize", this.updateDimensions.bind(this));
+    window.addEventListener('resize', this.updateDimensions.bind(this));
   }
   render() {
     return (
