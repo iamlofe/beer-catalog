@@ -13,6 +13,7 @@ class ContentBox extends React.Component {
   updateDimensions() {
     this.setState({width: window.innerWidth});
     //////////////////
+    /////////////////
   }
   componentDidMount() {
     window.addEventListener('resize', this.updateDimensions.bind(this));
