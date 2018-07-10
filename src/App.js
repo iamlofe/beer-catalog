@@ -12,10 +12,14 @@ import "./theme.scss";
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
       stateOfButton: false,
-      massOfBeers: [1111111111, 1111, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-      textOfSearch: ""
+      massOfBeers: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      textOfSearch: "",
+      valueAlcohol: 0,
+      valueIBU: 0,
+      valueEBC: 0
     };
   }
   changeFormSearch(e) {
@@ -33,6 +37,25 @@ class App extends Component {
       this.setState({
         stateOfButton: false
       });
+    }
+  }
+  onChangeValueOfSlider(value, e) {
+    switch (e.attributes.name.nodeValue) {
+      case "0":
+        this.setState({
+          valueAlcohol: value
+        });
+        break;
+      case "1":
+        this.setState({
+          valueIBU: value
+        });
+        break;
+      case "2":
+        this.setState({
+          valueEBC: value
+        });
+        break;
     }
   }
 
@@ -58,6 +81,30 @@ class App extends Component {
               change={this.changeFormSearch.bind(this)}
               textOfSearch={this.state.textOfSearch}
             />
+            <div className="main__filter">
+              <Slider
+                max={10}
+                step={0.1}
+                name={0}
+                value={this.state.valueAlcohol}
+                onChangeValueOfSlider={this.onChangeValueOfSlider.bind(this)}
+                title={"Alcohol by value"}
+              />
+              <Slider
+                name={1}
+                title={"International Bitterness Units"}
+                value={this.state.valueIBU}
+                onChangeValueOfSlider={this.onChangeValueOfSlider.bind(this)}
+                max={200}
+              />
+              <Slider
+                name={2}
+                title={"Color by EBC"}
+                value={this.state.valueEBC}
+                onChangeValueOfSlider={this.onChangeValueOfSlider.bind(this)}
+                max={10}
+              />
+            </div>
             <ContentBox massOfBeers={this.state.massOfBeers} />
           </div>
         </main>

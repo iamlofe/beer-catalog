@@ -38,6 +38,12 @@
     height: 30px;
 }
 
+@media (min-width: 2209px) {
+    .form-search__input {
+        width: 30%;
+    }
+}
+
 @media (max-width: 2208px) {
     .form-search__input {
         width: 30%;

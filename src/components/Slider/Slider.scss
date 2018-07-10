@@ -1,43 +1,43 @@
-.block-filter {
-    margin: 40px auto;
-    width: 30%;
+.block-filter__input[type=range] {
+    width: 100%; // flex-shrink: ;
 }
 
 .block-filter__input {
-    display: flex;
-    position: relative;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
+    appearance: none;
     height: 20px;
+    background-color: #C1C1C1;
+    outline: none;
+    height: 4px;
+    border-radius: 1px;
 }
 
-.block-filter__cursor {
-    position: absolute;
-    width: 20px;
-    height: 20px;
+.block-filter__input::-webkit-slider-thumb {
+    appearance: none;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
-    background: blue;
-    z-index: 2;
+    background-color: #106CC8;
 }
 
-.block-filter__line {
-    position: absolute;
-    background: #fff;
-    width: 100%;
-    height: 4px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 1;
+.main__filterAlcohol,
+.main__filterIBU,
+.main__filterEBC {
+    display: flex;
+    align-items: center;
+    margin: 1.2em 0px;
 }
 
-.block-filter__line--active {
-    position: absolute;
-    background: red;
-    width: 100%;
-    height: 4px;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 0;
+.main__title {
+    font-size: 1.3em;
+}
+
+.main__value {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: 25%;
+    div {
+        font-size: 1.7em;
+        width: 3em;
+    }
 }
